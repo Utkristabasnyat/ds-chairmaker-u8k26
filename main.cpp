@@ -78,20 +78,20 @@ int main() {
 
   cout << fixed << setprecision(2);
 
-  // creating pointer to first chair object
+  cout << "Default Constructor Chair" << endl;
   Chair *chairPtr = new Chair;
   chairPtr->setLegs(4);
   chairPtr->setPrices(121.21, 232.32, 414.14);
   chairPtr->print();
 
-  // creating dynamic chair object with constructor
+  cout << "Parameter Constructor Chair" << endl;
   double livingPrices[SIZE] = {525.25, 434.34, 252.52};
   Chair *livingChair = new Chair(3, livingPrices);
   livingChair->print();
   delete livingChair;
   livingChair = nullptr;
 
-  // creating dynamic array of chair objects
+  cout << "Default Constructor Chair Collection" << endl;
   Chair *collection = new Chair[SIZE];
 
   for (int i = 0; i < SIZE; i++)
