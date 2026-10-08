@@ -32,6 +32,11 @@ public:
       prices[i] = p[i];
   }
 
+  // destructor
+  ~Chair() {
+    delete[] prices;
+  }
+
   // setters and getters
   void setLegs(int l) {
     legs = l;
@@ -91,6 +96,12 @@ int main() {
 
   for (int i = 0; i < SIZE; i++)
     collection[i].print();
+
+  delete chairPtr;
+  chairPtr = nullptr;
+
+  delete[] collection;
+  collection = nullptr;
 
   return 0;
 }
